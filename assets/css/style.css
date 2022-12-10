@@ -1,4 +1,898 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --lightblue: #34B0BE;
+    --grey: #D1CECA;
+    --ligth-Black: #242635;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background-color: var(--ligth-Black);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* header*/
+.navbar {
+    position: relative;
+    text-align: end;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 1rem);
+    position: absolute;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.509);
+    z-index: 5;
+    display: none;
+}
+
+.nav-link li {
+    list-style: none;
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.nav_input,
+.nav_menu {
+    display: none;
+}
+
+.nav_input:checked+.nav-link {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    text-align: left;
+}
+
+
+.header-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.photo-desktop {
+    display: none;
+}
+
+.profile {
+    background-color: #3b3f5c;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.profile>img {
+    padding: 10px;
+}
+
+.header-experience {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-experience h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 2rem 0 0 0;
+}
+
+.header-experience p {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1rem;
+}
+
+.header-experience h1>span {
+    color: var(--lightblue);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.header-experience p>span {
+    color: var(--lightblue);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header-experience h1+p {
+    border-top: solid white;
+    padding-top: 1rem;
+}
+
+.header-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    margin: 0 5.5rem;
+}
+
+.job-social {
+    background-color: var(--grey);
+    padding: 4px 5px 1px 5px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.header-media {
+    background-color: #3b3f5c;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 10px 40px;
+    width: 90%;
+    max-width: 1000px;
+    gap: 1rem;
+}
+
+.social-media {
+    background-color: var(--grey);
+    border-radius: 10px;
+    padding: 5px 15px 2px 15px;
+}
+
+/* Fin header*/
+
+/* Acerca de mí*/
+
+#about-me {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#about-me span {
+    color: var(--lightblue);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#about-me p {
+    color: var(--grey);
+    padding: 2rem 1.5rem;
+}
+
+/*Fin acerca de mí*/
+
+/* Servicios*/
+
+#services h2 {
+    color: var(--lightblue);
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.services-roll {
+    margin: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.box {
+    background-color: var(--white);
+    min-width: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.box::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border-top: 6.5rem solid transparent;
+    border-right: 6.5rem solid transparent;
+    border-left: 8.5rem solid rgba(207, 207, 207, 0.2);
+    border-bottom: 8.5rem solid rgba(207, 207, 207, 0.2);
+    rotate: -45deg;
+    position: absolute;
+    top: -6.5rem;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.services-roll span {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 1rem 0;
+}
+
+.services-roll p {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--grey);
+    text-align: center;
+    width: 200px;
+}
+
+.services-roll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Fin servicios*/
+
+/* Mis habilidades*/
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--lightblue);
+    margin: 5rem 0 0 0;
+}
+
+#skills img {
+    display: none;
+}
+
+.contenedor {
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+    color: white;
+    gap: 1rem;
+    max-width: 800px;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.skill article {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.skill span {
+    color: var(--lightblue);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.barra {
+    position: relative;
+    border: 1px solid var(--lightblue);
+    border-radius: 10px;
+}
+
+.barra div {
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+    background-color: var(--lightblue);
+    padding: 0.1rem;
+}
+
+/*Animación*/
+
+#progreso-uno {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill 2s forwards;
+}
+
+@keyframes barra-skill {
+    100% {
+        width: 50%;
+    }
+}
+
+#progreso-dos {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill2 2s forwards;
+}
+
+@keyframes barra-skill2 {
+    100% {
+        width: 50%;
+    }
+}
+
+#progreso-tres {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill3 2s forwards;
+}
+
+@keyframes barra-skill3 {
+    100% {
+        width: 40%;
+    }
+}
+
+#progreso-cuatro {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill4 2s forwards;
+}
+
+@keyframes barra-skill4 {
+    100% {
+        width: 0%;
+    }
+}
+
+#progreso-cinco {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill5 2s forwards;
+}
+
+@keyframes barra-skill5 {
+    100% {
+        width: 0%;
+    }
+}
+
+#progreso-seis {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill6 2s forwards;
+}
+
+@keyframes barra-skill6 {
+    100% {
+        width: 0%;
+    }
+}
+
+#progreso-siete {
+    margin: -1px;
+    border-radius: 10px;
+    animation: barra-skill7 2s forwards;
+}
+
+@keyframes barra-skill7 {
+    100% {
+        width: 0%;
+    }
+}
+
+
+/**/
+/*Fin Mis habilidades*/
+
+/*Portafolio*/
+#portafolio {
+    margin: 1rem;
+    text-align: center;
+    color: var(--lightblue);
+}
+
+#portafolio h2 {
+    margin: 4rem 0 2rem 0;
+}
+
+.port-scroll {
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: scroll;
+    gap: 1rem;
+}
+
+.port-scroll ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    width: 400%;
+    gap: 1rem;
+}
+
+.port-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/*Fin de portafolio*/
+
+/*Contacto*/
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0 3rem 0;
+
+}
+
+#contact h2 {
+    color: var(--lightblue);
+    text-align: center;
+}
+
+#contact .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0 0 0;
+}
+
+.card {
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 230px;
+    height: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card h3 {
+    text-align: center;
+    padding: 1rem 0 0 0;
+}
+
+.card span {
+    text-align: center;
+    color: var(--grey);
+}
+
+.back {
+    position: absolute;
+    top: -40px;
+    z-index: -3;
+    height: 70%;
+}
+
+/*Fin contacto*/
+
+/*Responsividad*/
+
+
+@media screen and (min-width: 600px) {
+
+    #contact .cards-container {
+        flex-direction: row;
+        gap: 3rem;
+        width: 500px;
+    }
+
+    .services-roll {
+        gap: 2.5rem;
+    }
+
+}
+
+@media screen and (min-width: 720px) {
+
+    #services {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .services-roll {
+        gap: 1.5rem;
+    }
+
+    .navbar {
+        margin-top: 1rem;
+        margin-bottom: 6rem;
+    }
+
+    .nav-buttom {
+        display: none;
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        justify-content: flex-end;
+        width: 100%;
+        border-radius: 0;
+        padding-right: 1rem;
+        box-shadow: 0 1px 30px #444a79;
+        left: 0;
+        top: -20px;
+    }
+
+    .header-information {
+        position: relative;
+        margin-bottom: -1rem;
+    }
+
+    .header-experience {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        text-align: left;
+    }
+
+    .header-experience h1 {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        font-size: 32px;
+
+    }
+
+    .header-experience h1>span {
+        border-top: solid white;
+        margin-top: 0.5rem;
+    }
+
+    .header-experience h1+p {
+        border: none;
+    }
+
+    .header-social {
+        position: relative;
+    }
+
+    .social {
+        position: absolute;
+        top: -100px;
+        left: -5px;
+    }
+
+    .profile {
+        width: 400px;
+        height: 400px;
+    }
+
+    .photo {
+        width: 300px;
+        height: 400px;
+    }
+
+    .header-media {
+        top: 1rem;
+        padding: 2rem;
+    }
+
+    .social-media svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    #about-me>p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    .header-information {
+        margin: 150px 1rem -1rem 1rem;
+    }
+
+    .header-experience {
+        width: 400px;
+        left: 70px;
+        top: 50px;
+    }
+
+    .header-experience h1 {
+        font-size: 80px;
+        font-weight: 600;
+    }
+
+    .header-experience h1>span {
+        font-size: 80px;
+        font-weight: 600;
+    }
+
+    .header-experience>p {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .header-experience p>span {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .social {
+        top: -150px;
+        left: 10px;
+        gap: 2rem;
+    }
+
+    .job-social svg {
+        width: 70px;
+        height: 70px;
+        padding: 0.5rem;
+    }
+
+    .profile {
+        width: 650px;
+        height: 650px;
+        margin: -2rem;
+    }
+
+    .photo {
+        display: none;
+    }
+
+    .photo-desktop {
+        display: block;
+        position: absolute;
+        top: -70px;
+        width: 150rem;
+    }
+
+    .nav-link {
+        gap: 0.5rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        left: 0;
+        top: -20px;
+    }
+
+    .nav-link>li>a:hover {
+        transition: 0.5s ease-in-out;
+        background-color: #34B0BE;
+    }
+
+    a {
+        padding: 0.5rem 1rem;
+    }
+
+    .port-scroll {
+        width: 200%;
+        overflow: hidden;
+    }
+
+    .port-scroll ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+
+        width: 200%;
+        animation: cambio 10s infinite alternate-reverse;
+        animation-timing-function: ease-in;
+    }
+
+    .port-scroll ul li {
+        width: 100%;
+    }
+
+    .port-scroll img {
+        width: 100%;
+    }
+
+    @keyframes cambio {
+
+        0% {
+            margin-left: 0;
+        }
+
+        10% {
+            margin-left: 0;
+        }
+
+        10% {
+            margin-left: -10%;
+        }
+
+        20% {
+            margin-left: -10%;
+        }
+
+        20% {
+            margin-left: -20%;
+        }
+
+        30% {
+            margin-left: -20%;
+        }
+
+        30% {
+            margin-left: -30%;
+        }
+
+        40% {
+            margin-left: -30%;
+        }
+
+        40% {
+            margin-left: -40%;
+        }
+
+        50% {
+            margin-left: -40%;
+        }
+
+        50% {
+            margin-left: -50%;
+        }
+
+        60% {
+            margin-left: -50%;
+        }
+
+        60% {
+            margin-left: -60%;
+        }
+
+        70% {
+            margin-left: -60%;
+        }
+
+        70% {
+            margin-left: -70%;
+        }
+
+        80% {
+            margin-left: -70%;
+        }
+
+        80% {
+            margin-left: -80%;
+        }
+
+        90% {
+            margin-left: -80%;
+        }
+
+        90% {
+            margin-left: -90%;
+        }
+
+        100% {
+            margin-left: -100%;
+        }
+    }
+
+    #about-me>p {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .box:hover {
+        transform: scale(1.02);
+        box-shadow: 3px 3px 10px rgb(133, 123, 142);
+    }
+
+    .header-media article svg {
+        width: 90px;
+        height: 90px;
+    }
+
+    #about-me span {
+        font-size: 50px;
+    }
+
+    #services h2 {
+        font-size: 50px;
+    }
+
+    #skills h2 {
+        font-size: 50px;
+    }
+
+    #portafolio h2 {
+        font-size: 50px;
+    }
+
+    #contact h2 {
+        font-size: 50px;
+    }
+
+    #skills {
+        position: relative;
+    }
+
+    #skills img {
+        display: block;
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        right: 40px;
+        top: 80px;
+    }
+
+    .contenedor {
+        width: 60%;
+        padding-left: 5rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
     --blue: #34e0e0;
@@ -15,10 +909,10 @@
 
 }
 
-/*img {
+img {
     max-width: 100%;
     display: block;
-}*/
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -261,3 +1155,5 @@ p {
     }
 
 }
+
+*/
